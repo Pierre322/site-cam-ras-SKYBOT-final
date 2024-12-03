@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mise en page vidéo et boutons</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        .video-block {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px 0;
+        }
+
+        .video-block video {
+            width: 100%;
+            border-radius: 8px;
+            background-color: #000;
+        }
+
+        .buttons-table {
+            margin: 20px 0;
+            border-collapse: collapse; /* Rendre les bordures invisibles */
+        }
+
+        .buttons-table td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Bloc vidéo -->
+    <div class="video-block">
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+            Votre navigateur ne prend pas en charge la vidéo HTML5.
+        </video>
+    </div>
+
+    <!-- Tableau pour les boutons -->
+    <table class="buttons-table">
+        <tr>
+            <td><button class="button">Haut</button></td>
+        </tr>
+        <tr>
+            <td><button class="button">Gauche</button></td>
+            <td></td> <!-- Cellule vide pour espacement -->
+            <td><button class="button">Droite</button></td>
+        </tr>
+        <tr>
+            <td><button class="button">Bas</button></td>
+        </tr>
+    </table>
+</body>
+
+</html>
