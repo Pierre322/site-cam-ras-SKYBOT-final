@@ -8,8 +8,8 @@
         body {
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Aligner les éléments en haut */
-            align-items: center; /* Centrer horizontalement */
+            justify-content: flex-start;
+            align-items: center;
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
@@ -17,7 +17,7 @@
         }
 
         .video-block {
-            margin-top: 20px; /* Ajouter un espace au-dessus */
+            margin-top: 20px;
             width: 90%;
             max-width: 768px;
             text-align: center;
@@ -37,7 +37,7 @@
         }
 
         .arrows {
-            margin-top: 40px; /* Espacement supplémentaire entre la vidéo et les boutons */
+            margin-top: 40px;
             display: grid;
             grid-template-areas:
                 ". up ."
@@ -79,18 +79,32 @@
             background-color: #45a049;
         }
     </style>
+    <script>
+        async function sendCommand(direction) {
+            try {
+                const response = await fetch(`/${direction}`);
+                if (response.ok) {
+                    console.log(`Command sent: ${direction}`);
+                } else {
+                    console.error(`Error sending command: ${response.statusText}`);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+    </script>
 </head>
 
 <body>
     <div class="video-block">
-        <img alt="Video stream" src="http://192.168.1.102:81/stream" />
+        <img alt="Video stream" src="http://192.168.1.36:81/stream" />
     </div>
 
     <div class="arrows">
-        <p class="up"><a href="/up"><button class="arrow">Haut</button></a></p>
-        <p class="left"><a href="/left"><button class="arrow">Gauche</button></a></p>
-        <p class="down"><a href="/down"><button class="arrow">Bas</button></a></p>
-        <p class="right"><a href="/right"><button class="arrow">Droit</button></a></p>
+        <button class="arrow up" onclick="sendCommand('up')">Haut</button>
+        <button class="arrow left" onclick="sendCommand('left')">Gauche</button>
+        <button class="arrow down" onclick="sendCommand('down')">Bas</button>
+        <button class="arrow right" onclick="sendCommand('right')">Droit</button>
     </div>
 </body>
 
