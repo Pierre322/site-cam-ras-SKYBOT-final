@@ -2,8 +2,8 @@
 #include <ESPAsyncWebServer.h>
 #include <SPIFFS.h>
 
-const char *ssid = "BTS_CIEL";
-const char *password = "ERIR1234";
+const char *ssid = "S23K";
+const char *password = "pingpongg";
 
 const int ledDroite = 26;  
 const int ledBas = 18;     
