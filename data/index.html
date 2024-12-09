@@ -5,23 +5,23 @@
     <meta charset="UTF-8">
     <title>Simple stream page</title>
     <style>
-        .body {
+        body {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            justify-content: flex-start; /* Aligner les éléments en haut */
+            align-items: center; /* Centrer horizontalement */
             height: 100vh;
             margin: 0;
-            font-family: Arial, sans-serif;  
+            font-family: Arial, sans-serif;
             background-color: #f4f4f4;
         }
 
         .video-block {
-            margin-bottom: 20px;
+            margin-top: 20px; /* Ajouter un espace au-dessus */
             width: 90%;
             max-width: 768px;
             text-align: center;
-            height: 300px; 
+            height: 300px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -37,6 +37,7 @@
         }
 
         .arrows {
+            margin-top: 40px; /* Espacement supplémentaire entre la vidéo et les boutons */
             display: grid;
             grid-template-areas:
                 ". up ."
@@ -81,10 +82,8 @@
 </head>
 
 <body>
-    <div class="main-container">
-        <div class="video-block">
-            <img alt="Video stream" src="http://192.168.1.36:81/stream" />
-        </div>
+    <div class="video-block">
+        <img alt="Video stream" src="http://192.168.1.36:81/stream" />
     </div>
 
     <div class="arrows">
