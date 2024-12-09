@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Simple stream and control page for esp32-cam Renzo Mischianti <www.mischianti.org> -->
 <html lang="en">
 
 <head>
@@ -16,12 +17,13 @@
             background-color: #f4f4f4;
         }
 
+        /* Bloc vidéo */
         .video-block {
             margin-bottom: 20px;
             width: 90%;
             max-width: 768px;
             text-align: center;
-            height: 300px; 
+            height: 300px; /* Hauteur fixe pour stabiliser l'espace */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -36,6 +38,7 @@
             border-radius: 8px;
         }
 
+        /* Arrows container */
         .arrows {
             display: grid;
             grid-template-areas:
@@ -47,6 +50,7 @@
             align-items: center;
         }
 
+        /* Position des boutons */
         .arrows .up {
             grid-area: up;
         }
@@ -63,6 +67,7 @@
             grid-area: right;
         }
 
+        /* Boutons stylisés */
         .arrow {
             padding: 20px 40px;
             font-size: 24px;
